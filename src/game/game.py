@@ -12,6 +12,8 @@ from ..utils.constants import LOSER_MESSAGE
 from ..utils.helpers import reset_game
 from ..utils.helpers import exit_game
 
+puntos_totales = sum(SIZE_SHIPS[ship] * NUM_SHIPS[ship] for ship in NUM_SHIPS)  # Total de puntos necesarios para ganar
+
 def mecanica_juego(table_pc, table_user):
     # Aquí se implementará la lógica principal del juego, como el bucle de turnos, la verificación de ganadores, etc.
     while True:
@@ -19,6 +21,10 @@ def mecanica_juego(table_pc, table_user):
         while continue_user == True:
             # Turno del jugador
             print("\nTurno del jugador: Dispara a coordenadas del enemigo")
+            my_point = np.sum(table_pc == 6)
+            enemy_point = np.sum(table_user == 6)
+            print(f"Puntos del jugador: {my_point} / {puntos_totales}")
+            print(f"Puntos de la máquina: {enemy_point} / {puntos_totales}")
             coordenadas_usuario = turn.obtener_coordenadas_usuario(table_pc)
             # Aquí se debería verificar si el disparo fue un acierto o un fallo, actualizar el tablero, etc.
             continue_user = turn.comprobar_acierto(table_pc, coordenadas_usuario)
@@ -38,7 +44,7 @@ def mecanica_juego(table_pc, table_user):
     
 def verificar_ganador(table_pc, table_user):
     # Aquí se implementará la lógica para verificar si el jugador o la máquina ha ganado el juego
-    puntos_totales = sum(SIZE_SHIPS[ship] * NUM_SHIPS[ship] for ship in NUM_SHIPS)  # Total de puntos necesarios para ganar
+    
     if np.sum(table_pc == 6) == puntos_totales:
         print(VICTORY_MESSAGE)
         reiniciar_juego()

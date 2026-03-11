@@ -41,11 +41,6 @@ def main():
     
     # Colocar barcos de la máquina automáticamente
     table_pc.grid = table_pc.put_ships_pc(table_pc.grid)
-
-    
-    print("\n¡BIENVENIDO A HUNDIR LA FLOTA!")
-    print("Turno del jugador: Dispara a coordenadas del enemigo")
-    print("Las máquinas disparan aleatoriamente a tu tablero\n")
     
     mecanica_juego(table_pc.grid, table_user.grid)
     
