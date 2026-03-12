@@ -29,6 +29,7 @@ class Board:
         return tablero
     
     def put_ships(self, tablero_user, tablero_pc):
+        # Colocar barcos automáticamente para el usuario
         for ship in NUM_SHIPS:
             for _ in range(NUM_SHIPS[ship]):
                 nuevo_barco = Ship(ship, SIZE_SHIPS[ship], tablero_user)
@@ -41,6 +42,7 @@ class Board:
         return tablero_user
     
     def put_ships_manual(self, tablero_user, tablero_pc):
+        # Colocar barcos manualmente para el usuario
         for ship in NUM_SHIPS:
             for _ in range(NUM_SHIPS[ship]):
                 nuevo_barco = Ship(ship, SIZE_SHIPS[ship], tablero_user)
@@ -53,6 +55,7 @@ class Board:
         return tablero_user
     
     def put_ships_pc(self, tablero_pc):
+        # Colocar barcos automáticamente para la PC
         for ship in NUM_SHIPS:
             for _ in range(NUM_SHIPS[ship]):
                 nuevo_barco = Ship(ship, SIZE_SHIPS[ship], tablero_pc)
