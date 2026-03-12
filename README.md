@@ -86,7 +86,6 @@ python main.py
 │   ├── board/            # Módulo de tableros
 │   │   ├── __init__.py
 │   │   ├── board.py      # Clase Board (tablero)
-│   │   └── cell.py       # Clase Cell (celda)
 │   ├── game/             # Módulo de lógica del juego
 │   │   ├── __init__.py
 │   │   ├── game.py       # Mecánica principal del juego
