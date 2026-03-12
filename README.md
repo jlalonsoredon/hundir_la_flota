@@ -9,7 +9,6 @@ Un juego interactivo de **Hundir la Flota** (Battleship) implementado en Python,
   - **Automático**: Los barcos se colocan de forma aleatoria
   - **Manual**: El jugador ingresa las coordenadas de cada barco
 - ✅ Interfaz clara en consola con emojis
-- ✅ IA para los disparos de la máquina
 - ✅ Validación de coordenadas y movimientos
 - ✅ Tableros ocultos del enemigo (solo se muestran impactos y agua)
 - ✅ Turnos alternados entre jugador y máquina
