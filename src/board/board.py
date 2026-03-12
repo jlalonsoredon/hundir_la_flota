@@ -147,7 +147,7 @@ def validar_coordenadas(coordenadas):
     
     fila_index = ord(fila) - ord('A')
     col_index = int(col) - 1
-    print(f"Coordenadas convertidas a índices: ({fila_index}, {col_index})")
+    #print(f"Coordenadas convertidas a índices: ({fila_index}, {col_index})")
     if not (0 <= fila_index <= 10 and 0 <= col_index <= 10):
         raise ValueError("Coordenadas fuera del rango. Usa A-J y 1-10")
     
