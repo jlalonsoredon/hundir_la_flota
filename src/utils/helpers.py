@@ -1,7 +1,5 @@
 import os
 import time
-import sys
-from pathlib import Path
 from .constants import EXIT_MESSAGE
 from .constants import RESET_MESSAGE
 
