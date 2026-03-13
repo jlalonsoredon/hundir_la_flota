@@ -82,18 +82,19 @@ class Board:
         # Reemplazar barcos (1-4) con 0 (vacío)
         for i in range(tablero2_oculto.shape[0]):
             for j in range(tablero2_oculto.shape[1]):
+                # Solo reemplazar si es un número entero entre 1 y 4
                 if isinstance(tablero2_oculto[i, j], (int, np.integer)) and 1 <= tablero2_oculto[i, j] <= 4:
                     tablero2_oculto[i, j] = 0
 
         # filas
         for i in range(size):
+            #imprime el eje de coordenadas alfabético (A, B, C a J)
             letra = chr(ord("A") + i)
             
             # Si el tablero tiene encabezado (11x11), accede a tablero[i+1]
             # Si es solo datos (10x10), accede a tablero[i]
             fila_index = i + 1 if tablero1.shape[0] == 11 else i
-            
-
+            # Para cada celda en la fila, mostrar el gráfico correspondiente o el número si no hay gráfico definido en GRAFICS
             fila1 = "".join(f"{GRAFICS.get(int(celda), str(celda)):>3}" for celda in tablero1[fila_index][1:])
             fila2 = "".join(f"{GRAFICS.get(int(celda), str(celda)):>3}" for celda in tablero2_oculto[fila_index][1:])
 
